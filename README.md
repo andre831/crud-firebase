@@ -12,7 +12,7 @@ __then__
 
 >   
     docker run \
-    --it \
+    -it \
     --rm \
     -v ${PWD}:/app \
     -v /node_modules/app \
