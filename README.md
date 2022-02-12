@@ -15,7 +15,7 @@ __then__
     -it \
     --rm \
     -v ${PWD}:/app \
-    -v /node_modules/app \
+    -v /app/node_modules \
     -p 3000:3000 \
     -e CHOKIDAR_USEPOLLING=true \
     --name crud-firebase \
