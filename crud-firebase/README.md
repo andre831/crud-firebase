@@ -10,12 +10,13 @@ You can to up container with command \n
 
 __then__
 
-> ` docker run \
+>   
+    docker run \
     --it \
     --rm \
     -v ${PWD}:/app \
-    -v /app/node_modules \
+    -v /node_modules/app \
     -p 3000:3000 \
+    -e CHOKIDAR_USEPOLLING=true \
     --name crud-firebase \
     crud-firebase:dev
- `
