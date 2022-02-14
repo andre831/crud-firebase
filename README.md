@@ -6,7 +6,8 @@ I built this for study. A simple CRUD with connection Firebase in React and Styl
 
 You can to up container with command \n
 
-> `docker build -t crud-firebase:dev .`
+>   
+    docker build -t crud-firebase:dev .
 
 __then__
 
