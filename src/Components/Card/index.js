@@ -1,4 +1,4 @@
-
+import { Link, useParams } from 'react-router-dom'; 
 import Button from '../Button'
 import { ContainerCard, CardContent, 
     CardContentHead, CardTitle, 
@@ -6,6 +6,9 @@ import { ContainerCard, CardContent,
     CardListUl, CardListLi, CardContentButtons } from "./style";
 
 function Card(props) {
+
+    const { id } = useParams()
+
     return (
         <ContainerCard>
             <CardContent>
@@ -21,13 +24,12 @@ function Card(props) {
                         </CardListUl>
                     </CardContentList>
                     <CardContentButtons>
-                        <Button buttonTheme={`#00ddfa`}
-                            action={props.updateAction}>
-                            Alterar
-                        </Button>
+                        <Link to={`/formupdate?${props.personId}`}>
+                            Update
+                        </Link>
                         <Button buttonTheme={`#ff0000`}
-                            action={props.deleteAction}>
-                            Deletar
+                            actionClick={props.actionDelete}>
+                            Delete
                         </Button>
                     </CardContentButtons>
                 </CardContentBody>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 import Card from "../../Components/Card";
 import Container from "../../Components/Container";
@@ -6,6 +7,8 @@ import Container from "../../Components/Container";
 import firebase from '../../service/firebase/firebaseConnection';
 
 function Home() {
+
+  const { id } = useParams();
 
   const [personData, setPersonData] = useState([]);
 
@@ -28,11 +31,20 @@ function Home() {
 
         setPersonData(data);
       })
-    }
-    console.log(personData[0])
+    } 
     getAllPersonRecords()
+    console.log(personData)
 
   }, []);
+
+   async function  deleteRecordItemPerson(docId){
+    await firebase.firestore().collection('persons')
+    .doc(docId)
+    .delete()
+    .then(
+      alert('item excluido')
+    )
+  }
 
   return (
     <Container>
@@ -40,6 +52,8 @@ function Home() {
           return(
             <Card key={item.id} name={item.name} lastname={item.lastname}
                   year={item.year} birth={item.birth} cpf={item.cpf}
+                  personId={item.id}
+                  actionDelete={() => deleteRecordItemPerson(item.id)}
             />
           )
         })}

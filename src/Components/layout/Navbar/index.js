@@ -8,7 +8,7 @@ export default function Navbar(){
             <NavContent>
                 <NavLogo><Link to="/">Cadastro</Link></NavLogo>  
                 <NavContentPaths>
-                    <NavContentItems><Link to="/">Add item</Link></NavContentItems>
+                    <NavContentItems><Link to="/formadd">Add</Link></NavContentItems>
                 </NavContentPaths>
             </NavContent>
         </Nav>

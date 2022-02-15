@@ -55,11 +55,14 @@ const NavContentItems = styled.li`
     }
 
     a{  
-        padding: 4px 8px;
+        padding: 6px 12px;
         font-size: 1.3rem;
         font-weight: 600;
+        text-transform: uppercase;
         text-decoration: none;
-        color: #fff;
+        border-radius: 4px;
+        color: #15003d;
+        background: #ffaa00;
         transition: .3s;
 
         &:hover{
