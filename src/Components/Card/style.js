@@ -86,6 +86,29 @@ const CardContentButtons = styled.li`
 
     display: flex;
     flex-direction: row;
+
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 105px;
+        margin: 5px;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        background: #ffaa00 ;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover{
+            color: #ffaa00;
+            border-color: #ffaa00;
+            background: #fff;
+        }
+    }
 `;
 
 export { ContainerCard, CardContent, 

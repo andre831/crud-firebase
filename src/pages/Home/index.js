@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 
 import Card from "../../Components/Card";
 import Container from "../../Components/Container";
@@ -7,8 +6,6 @@ import Container from "../../Components/Container";
 import firebase from '../../service/firebase/firebaseConnection';
 
 function Home() {
-
-  const { id } = useParams();
 
   const [personData, setPersonData] = useState([]);
 
@@ -30,10 +27,9 @@ function Home() {
           });
 
         setPersonData(data);
-      })
+      });
     } 
-    getAllPersonRecords()
-    console.log(personData)
+    getAllPersonRecords();
 
   }, []);
 
@@ -42,8 +38,8 @@ function Home() {
     .doc(docId)
     .delete()
     .then(
-      alert('item excluido')
-    )
+      alert('Deleted item')
+    );
   }
 
   return (

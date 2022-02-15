@@ -13,11 +13,10 @@ const Routes = () => {
               <Switch>
                 <Route exact path="/" component={ Home }/>
                 <Route exact path="/formadd" component={ FormAdd }/>
-                <Route exact path="/formupdate?:id" component={ FormUpdate }/>
+                <Route exact path="/formupdate/:id" component={ FormUpdate }/>
             </Switch>   
         </BrowserRouter>
-       
-    )
+    );
 }
 
 export default Routes;

@@ -23,8 +23,9 @@ function FormAdd(){
             setLastname(''),
             setYear(''),
             setBirth(''),
-            setCpf('')
-        )
+            setCpf(''),
+            alert("Add item in home")
+        );
     }
 
     return(

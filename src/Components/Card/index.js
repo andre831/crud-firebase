@@ -3,11 +3,9 @@ import Button from '../Button'
 import { ContainerCard, CardContent, 
     CardContentHead, CardTitle, 
     CardContentBody, CardContentList, 
-    CardListUl, CardListLi, CardContentButtons } from "./style";
+    CardListUl, CardListLi, CardContentButtons} from "./style";
 
 function Card(props) {
-
-    const { id } = useParams()
 
     return (
         <ContainerCard>
@@ -24,7 +22,7 @@ function Card(props) {
                         </CardListUl>
                     </CardContentList>
                     <CardContentButtons>
-                        <Link to={`/formupdate?${props.personId}`}>
+                        <Link to={`/formupdate/${props.personId}`}>
                             Update
                         </Link>
                         <Button buttonTheme={`#ff0000`}
